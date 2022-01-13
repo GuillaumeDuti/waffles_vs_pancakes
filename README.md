@@ -1,4 +1,4 @@
-# waffles_vs_pancakes
+# waffles vs pancakes game
 
 ## Principe de jeu
 
