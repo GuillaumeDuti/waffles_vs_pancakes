@@ -1,31 +1,40 @@
 # waffles_vs_pancakes
 
-## Thème Heroes Vs Monsters
-Nous aurons 4 héros différents. Nous aurons également 4 monstres différents.
+## Principe de jeu
 
-Chaque Héro, est un personnage il est constitué de vie, de défence, de défence spécial (magique), attaque, attaque spécial (magique) A vous de déterminer l'héritage correctement.
+Il y a N (random) clients (10-30 pers) qui ont chaqun N (random) argents (5-20€) tous les jours et une envie particulière Gauffres/Crêpes.
+La foire du Rio dure une semaine (7j).
 
-Les Monstres quand à eux, sont également pourvu du type personnage, et peuvent ou, infliger du physique ou du magique.
+Au début de la partie, on détermine avec notre chiffre d'affaire (fixe) les caractéristiques du bizz.
 
-Le déroulement de base se passe : Choix (input html) du héro, génération des stats du héro sur base du choix. Choix aléatoire du monstre à construire. Lancement du combat, quand le héro ou le monstre meurt, signalez le gagnant.
+Après chaque jour, on determine la nouvelle stratégie pour le lendemain :
+- remplissage des stocks
+- prix de ventes
+- promos
+- (capital restant pour le prochain tour)
 
-Amélioration 1 possible : commencer level 1 et améliorer de un niveaux tout les monstres tuer. Si le héro meurt, on peux reset les combats, avec la moitier de ses niveaux
+(Les éléments magasin cité plus haut sont générés aléatoirement pour le magasin adverse)
 
-Amélioration 2 possible : une micro gestion de gains d'argent.
+Si un des magasins fait faillite avant les 7 jours => fin de la partie
+Au bout des 7 jours (ou dans le cas de la faillite) c'est le plus riche magasin qui gagne
 
-Amélioration 3 possible : une gestion de loot, armure, arme
+- magasins
+    - nom
+    - chiffres d'affaires
+    - produits
+        - nom
+        - coût fabrication (premier temps fixe)
+        - prix de ventes
+        - stock
+        - peremptions (dans premier temps 1 jour)
+    - promo (ex : 1+1)
+    - prix de l'emplacement (fixe)
 
-Amélioration 4 possible : Gérer lors des level up, des gains de stats supérieur (algo propre)
+- clients
+    - portefeuille
+    - envie (45% vs 55%)
 
-## Thème Gestion Magasin (magasinier)
-Créer, dans un concept html classique, une gestion de magasin d'entreprise complète càd : Gestion du stock, gestion des commandes, facturation, gestion des retours client, la mise à jours des prix.
 
-Le déroulement de base : Un client, peux commander un / des produits, la commande est transmise au magasinier. le magasinier l'encode dans son magasin, et de la, on enlève le ou les articles, on crée une facture que l'on envoie au client. Le magasinier peux également mettre à jours son stock quand il reçoit du matériel du fournisseur. Le magasinier peux mettre à jour le prix de ces articles en stock.
 
-Amélioration 1 : le magasinier peut, à la demande, ressortir des factures client.
 
-Amélioration 2 : Le magasin peux recevoir des retour clients
 
-Amélioration 3 : gestion du stock vide
-
-Amélioration 4 : La liste des articles sera un objet JSON pré-rempli dans un fichier à part !!!!
