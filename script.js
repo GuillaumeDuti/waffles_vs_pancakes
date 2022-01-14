@@ -1,3 +1,7 @@
+import Shop from './src/models/Shop.js';
+import Product from './src/models/Product.js';
+import Client from './src/models/Client.js';
+
 // créer la structure Orienté Objets
 
     // - magasins
@@ -28,95 +32,18 @@
 
 // connecter html et js
 
-class Product {
-    constructor(name, cost, price, stock) {
-        this.name = name;
-        this.cost = cost;
-        this.price = price;
-        this.stock = stock;
-    }
+class Game {
+    shop1;
+    shop2;
+    currentDay;
+    gameStatus;
+    win;
 }
 
-class Shop {
-    name = "Creperies";
-    money = 0;
-    products= [];
+const shop = new Shop('Crepe', 1000);
+const client = new Client(1000, 0.5);
+const product = new Product('gauffres', 0.5, 3.0, 10);
 
-    constructor(newName, newMoney) {
-        this.name = newName;
-        // money
-        if (newMoney < 0) {
-            this.money = 0;
-        }else {
-            this.money = newMoney;
-        }
-    }
-
-    getName() {
-        return this.name;
-    }
-
-    setName(newName){
-        this.name = newName;
-    }
-
-    getProducts(){
-        return this.products;
-    }
-
-    setProducts(newProducts){
-        this.products = newProducts;
-    }
-
-    addProduct(newProduct){
-        this.products.push(newProduct);
-    }
-}
-
-const shop = new Shop("Gauffre", -10);
-const product = new Product("gauffre", 0.30, 3.00, 10);
-
-// console.log(shop, "avant");
-
-// shop.setProducts([...shop.getProducts(), product]);
-
-// console.log(shop, "après1");
-
-// shop.setProducts([...shop.getProducts(), product]);
-
-// console.log(shop, "après2");
-
-// console.log(shop.getName());
-// shop.setName("Crêpes");
-// console.log(shop.getName());
-
-// console.log(product);
-
-/*======================= SPREAD OPERATORS =====================*/
-
-const originalTab = [1,42,56,89,99];
-const originalObj = {name: "Pierre", age : "25"}
-
-// console.log([...originalTab], "spread simple");
-// console.log([...originalTab, 100], "ajout une valeur");
-// console.log([...originalTab, 100, 200], "ajout deux valeur");
-// console.log([...originalTab, "-" ,...originalTab], "multiple spread operator");
-
-// console.log({...originalObj, lotto: [...originalTab]}, "spread simple object");
-
-/*======================= DESTRUCTURING =====================*/
-
-const getPokemon = ({type, name, ...rest}) => {
-    console.log(name);
-    console.log(type);
-    console.log(rest);
-}
-
-const pokemon = {
-    name: "Pierre",
-    type: "feu",
-    age: '25',
-    foo: 'bar'
-}
-
-getPokemon(pokemon);
+console.log(shop);
+console.log(client);
+console.log(product);
