@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script defer src="script.js"></script>
+    <title>Waffles VS pancakes</title>
+</head>
+<body>
+    <h1>Bienvenue à la foire de Rio</h1>
+    <form id="shopProp" action="" method="get">
+        <div>
+            <label for="shopName">Indique le nom de ton magasin</label>
+            <input id="shopName" name="shopName" type="text">
+        </div>
+        <div>
+            <p>Choix de la recette</p>
+            <div>
+                <label for="productType">Gauffres</label>
+                <input type="radio" name="productType" value="waffles" id="waffles">
+            </div>
+            <div>
+                <label for="productType">Crêpes</label>
+                <input type="radio" name="productType" value="pancakes" id="pancakes">
+            </div>
+        </div>
+        <div>
+            <input type="submit" value="Send">
+        </div>
+    </form>
+</body>
+</html>

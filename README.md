@@ -2,7 +2,7 @@
 
 ## Principe de jeu
 
-Il y a N (random) clients (10-30 pers) qui ont chaqun N (random) argents (5-20€) tous les jours et une envie particulière Gauffres/Crêpes.
+Il y a N (random) clients (ex : 10-30 pers) qui ont chaqun N (random) argents (ex : 5-20€) tous les jours et une envie particulière Gauffres/Crêpes.
 La foire du Rio dure une semaine (7j).
 
 Au début de la partie, on détermine avec notre chiffre d'affaire (fixe) les caractéristiques du bizz.

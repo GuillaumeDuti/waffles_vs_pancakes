@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script defer src="script.js"></script>
+    <title>Waffles VS pancakes</title>
+</head>
+<body>
+    <section>
+        <div id="infos" class="container">
+            <h1>{ Nom magasin }</h1>
+            <div>
+                <span>{ Chiffre d'affaire }</span>
+            </div>
+            <div>
+                <span>{ Nombre d'achats tour précédent }</span>
+            </div>
+            <div>
+                <span>{ Nombre d'achats depuis le début }</span>
+            </div>
+            <div>
+                <span>{ Prix de ventes }</span>
+            </div>
+            <div>
+                <span>{ Promos }</span>
+            </div>
+        </div>
+    </section>
+    
+    <form id="bizForm" action="" method="post">
+        <div>
+            <label for="stockInput">Stock</label>
+            <input id="stockInput" name="stockInput" type="range" min="5" max="20">
+        </div>
+        <div>
+            <label for="priceInput">Prix de ventes</label>
+            <input id="priceInput" name="priceInput" type="range" min="1" max="20">
+        </div>
+        <div>
+            <p>Promos :</p>
+            <div>
+                <label for="promosInput">Rien</label>
+                <input type="radio" name="promoType" value="noPromos" id="noPromos">
+            </div>
+            <div>
+                <label for="promosInput">1 + 1</label>
+                <input type="radio" name="promoType" value="doublePromos" id="doublePromos">
+            </div>
+            <div>
+                <label for="promosInput">50% au second</label>
+                <input type="radio" name="promoType" value="halfPromos" id="halfPromos">
+            </div>
+        </div>
+        <div>
+            <input type="submit" value="Send">
+        </div>
+    </form>
+
+    
+</body>
+</html>
