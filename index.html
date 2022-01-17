@@ -1,33 +1,46 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Waffles VS pancakes</title>
+    <link rel="stylesheet" href="./style.css">
     <script src="./script.js" type="module" defer></script>
+    <title>Waffles VS pancakes</title>
 </head>
+
 <body>
-    <h1>Bienvenue à la foire de Rio</h1>
-    <form id="shopProp" action="" method="get">
-        <div>
-            <label for="shopName">Indique le nom de ton magasin</label>
-            <input id="shopName" name="shopName" type="text">
-        </div>
-        <div>
-            <p>Choix de la recette</p>
-            <div>
-                <label for="productType">Gauffres</label>
-                <input type="radio" name="productType" value="waffles" id="waffles">
+    <div id="welcome__title">
+        <h1>Bienvenue à la foire de Rio !!!</h1>
+        <h1>Bienvenue à la foire de Rio !!!</h1>
+    </div>
+    <div id="welcome__container">
+        <!-- <div> -->
+        <form id="shopProp" action="" method="get">
+            <div id="shopProp__shopName">
+                <label class="txt--light" for="shopName">Indique le nom de ton magasin</label>
+                <input id="shopName" name="shopName" type="text">
+            </div>
+            <div id="shopProp__productType">
+                <label class="txt--light" for="productType">Choix de la recette</label>
+                <div>
+                    <div>
+                        <label for="productType">Gauffres</label>
+                        <input type="radio" name="productType" value="waffles" id="waffles">
+                    </div>
+                    <div>
+                        <label for="productType">Crêpes</label>
+                        <input type="radio" name="productType" value="pancakes" id="pancakes">
+                    </div>
+                </div>
             </div>
             <div>
-                <label for="productType">Crêpes</label>
-                <input type="radio" name="productType" value="pancakes" id="pancakes">
+                <input type="submit" value="Send">
             </div>
-        </div>
-        <div>
-            <input type="submit" value="Send">
-        </div>
-    </form>
+        </form>
+        <!-- </div> -->
+    </div>
 </body>
+
 </html>
