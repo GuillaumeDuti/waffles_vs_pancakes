@@ -32,18 +32,14 @@ import Client from './src/models/Client.js';
 
 // connecter html et js
 
-class Game {
-    shop1;
-    shop2;
-    currentDay;
-    gameStatus;
-    win;
-}
+const shop = new Shop()
 
-const shop = new Shop('Crepe', 1000);
-const client = new Client(1000, 0.5);
-const product = new Product('gauffres', 0.5, 3.0, 10);
+shop.addProduct(new Product("gauffre", 0.3, 3.0, 10));
 
-console.log(shop);
-console.log(client);
-console.log(product);
+console.log(shop.getProducts()[0]);
+console.log(shop.money);
+
+shop.sellProductByName('gauffre');
+
+console.log(shop.getProducts()[0]);
+console.log(shop.money);
