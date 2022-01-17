@@ -43,5 +43,29 @@
     }
     >form {
         width: 100%;
+        table {
+            width: 100%;
+            td {
+                padding-top: 20px;
+                vertical-align: middle;
+                &:first-of-type {
+                    width: max-content;
+                    white-space: nowrap;
+                    text-overflow: none;
+                    padding-right: 50px;
+                    min-width: 200px;
+                }
+                &:last-of-type {
+                    width: 100%;
+                }
+            }
+        }
+        input {
+            padding: 0;
+            margin-right: 40px;
+            &[type=range] {
+                width: 100%;
+            }
+        }
     }
 }

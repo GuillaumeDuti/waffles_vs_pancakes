@@ -59,35 +59,60 @@
 
         <form id="bizForm" action="" method="post">
             <h2><strong>Stratégie de gestion tour suivant :</strong></h2>
-            <div>
-                <label for="stockInput">Stock</label>
-                <input id="stockInput" name="stockInput" type="range" min="5" max="20">
-            </div>
-            <div>
-                <label for="priceInput">Prix de ventes</label>
-                <input id="priceInput" name="priceInput" type="range" min="1" max="20">
-            </div>
-            <div>
-                <p>Promos :</p>
-                <div>
-                    <label for="promosInput">Rien</label>
-                    <input type="radio" name="promoType" value="noPromos" id="noPromos">
-                </div>
-                <div>
-                    <label for="promosInput">1 + 1</label>
-                    <input type="radio" name="promoType" value="doublePromos" id="doublePromos">
-                </div>
-                <div>
-                    <label for="promosInput">50% au second</label>
-                    <input type="radio" name="promoType" value="halfPromos" id="halfPromos">
-                </div>
-            </div>
-            <div>
-                <input type="submit" value="Send">
-            </div>
+            <table>
+                <tr>
+                    <td>
+                        <label for="stockInput">Stock (<span id="stockInputIndication"></span>)</label>
+
+                    </td>
+                    <td><input id="stockInput" value="5" name="stockInput" type="range" min="5" max="20"></td>
+                </tr>
+                <tr>
+                    <td><label for="priceInput">Prix de ventes (<span id="priceInputIndication"></span>)</label></td>
+                    <td><input id="priceInput" name="priceInput" type="range" min="1" max="20"></td>
+                </tr>
+                <tr>
+                    <td><label for="promosInput">Promos</label></td>
+                    <td>
+                        <!-- <div> -->
+                        <label for="promosInput">Rien</label>
+                        <input type="radio" name="promoType" value="noPromos" id="noPromos">
+                        <!-- </div> -->
+                        <!-- <div> -->
+                        <label for="promosInput">1 + 1</label>
+                        <input type="radio" name="promoType" value="doublePromos" id="doublePromos">
+                        <!-- </div> -->
+                        <!-- <div> -->
+                        <label for="promosInput">50% au second</label>
+                        <input type="radio" name="promoType" value="halfPromos" id="halfPromos">
+                        <!-- </div> -->
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <input type="submit" value="Send">
+                    </td>
+                    <td></td>
+                </tr>
+            </table>
         </form>
     </section>
+    <script>
+        let slider = document.querySelector("#stockInput");
+        let output = document.querySelector("#stockInputIndication");
+        let sliderPrice = document.querySelector("#priceInput");
+        let outputPrice = document.querySelector("#priceInputIndication");
+        output.innerHTML = slider.value; // Display the default slider value
+        outputPrice.innerHTML = sliderPrice.value; // Display the default slider value
 
+        // Update the current slider value (each time you drag the slider handle)
+        slider.addEventListener('input', function() {
+            output.innerHTML = this.value;
+        })
+        sliderPrice.addEventListener('input', function() {
+            outputPrice.innerHTML = this.value;
+        })
+    </script>
 
 </body>
 

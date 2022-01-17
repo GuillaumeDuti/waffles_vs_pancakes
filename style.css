@@ -432,4 +432,36 @@ label {
 #section-vs > form {
   width: 100%;
 }
+
+#section-vs > form table {
+  width: 100%;
+}
+
+#section-vs > form table td {
+  padding-top: 20px;
+  vertical-align: middle;
+}
+
+#section-vs > form table td:first-of-type {
+  width: -webkit-max-content;
+  width: -moz-max-content;
+  width: max-content;
+  white-space: nowrap;
+  text-overflow: none;
+  padding-right: 50px;
+  min-width: 200px;
+}
+
+#section-vs > form table td:last-of-type {
+  width: 100%;
+}
+
+#section-vs > form input {
+  padding: 0;
+  margin-right: 40px;
+}
+
+#section-vs > form input[type=range] {
+  width: 100%;
+}
 /*# sourceMappingURL=style.css.map */
