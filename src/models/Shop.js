@@ -57,8 +57,29 @@ export default class Shop {
         if (product instanceof Product) {
             // Check if the product is still available
             if (product.stock > 0) {
-                product.stock--;
-                this.money += product.price; // this.money = this.money + product.price;
+                switch (this.currentPromo.id) {
+                    case 'one+one':
+                        if (product.stock > 1) {
+                            product.stock = product.stock - 2;
+                        }else{
+                            product.stock = 0;
+                        }
+                        this.money += product.price;
+                        break;
+                    case 'second-half':
+                        if (product.stock > 1) {
+                            product.stock = product.stock - 2;
+                            this.money += product.price + (product.price/2)
+                        }else{
+                            product.stock = 0;
+                            this.money += product.price;
+                        }
+                        break;
+                    default:
+                        product.stock--;
+                        this.money += product.price; // this.money = this.money + product.price;
+                        break;
+                }
             }
         }
     }

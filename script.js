@@ -34,10 +34,33 @@ import Client from './src/models/Client.js';
 
 const shop = new Shop()
 
-shop.addProduct(new Product("gauffre", 0.3, 3.0, 10));
+const promos = [
+    {
+        id: 'one+one',
+        name: '1+1 Gratuit!'
+    },
+    {
+        id: 'second-half',
+        name: '2ème à moitié prix'
+    }
+]
 
-console.log(shop.getMoney());
+shop.addProduct(new Product("gauffre", 0.3, 3.0, 1));
 
-shop.payRent();
+// Test First Promo
+shop.setCurrentPromo(promos[0]);
+console.log(shop.getMoney(), "Before sell");
 
-console.log(shop.getMoney());
+shop.sellProductByName('gauffre')
+
+console.log(shop.getProducts()[0]);
+console.log(shop.getMoney(), "After sell");
+
+// TEst Second promo
+shop.setCurrentPromo(promos[1]);
+console.log(shop.getMoney(), "Before sell");
+
+shop.sellProductByName('gauffre')
+
+console.log(shop.getProducts()[0]);
+console.log(shop.getMoney(), "After sell");
