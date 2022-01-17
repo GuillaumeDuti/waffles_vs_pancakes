@@ -48,19 +48,35 @@ const promos = [
 shop.addProduct(new Product("gauffre", 0.3, 3.0, 10));
 
 // Test First Promo
-shop.setCurrentPromo(promos[0]);
-console.log(shop.getMoney(), "Before sell");
+// shop.setCurrentPromo(promos[0]);
+// console.log(shop.getMoney(), "Before sell");
 
-shop.sellProductByName('gauffre')
+// shop.sellProductByName('gauffre')
 
-console.log(shop.getProducts()[0]);
-console.log(shop.getMoney(), "After sell");
+// console.log(shop.getProducts()[0]);
+// console.log(shop.getMoney(), "After sell");
 
-// Test Second promo
-shop.setCurrentPromo(promos[1]);
-console.log(shop.getMoney(), "Before sell");
+// // Test Second promo
+// shop.setCurrentPromo(promos[1]);
+// console.log(shop.getMoney(), "Before sell");
 
-shop.sellProductByName('gauffre')
+// shop.sellProductByName('gauffre')
 
-console.log(shop.getProducts()[0]);
-console.log(shop.getMoney(), "After sell");
+// console.log(shop.getProducts()[0]);
+// console.log(shop.getMoney(), "After sell");
+
+const client = new Client(2);
+
+const gauffrerie = new Shop('gauffrerie');
+const creperies = new Shop('crêperie');
+
+gauffrerie.setCurrentPromo(promos[1]);
+
+gauffrerie.addProduct(new Product('gauffre', 0.3, 1.5, 10));
+creperies.addProduct(new Product('crêpe', 0.3, 2.0, 10));
+
+client.generateWish({
+    shops : [gauffrerie, creperies],
+});
+
+console.log(client.getWish());
