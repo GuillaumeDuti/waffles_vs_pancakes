@@ -138,14 +138,45 @@ table {
           box-sizing: border-box;
 }
 
+@font-face {
+  font-family: 'future_lightitalic';
+  src: url("./assets/fonts/future_light_italic.woff2") format("woff2"), url("./assets/fonts/future_light_italic.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'future_lightitalic';
+  src: url("./assets/fonts/future_light_italic.woff2") format("woff2"), url("./assets/fonts/future_light_italic.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'future_lightregular';
+  src: url("./assets/fonts/future_light.woff2") format("woff2"), url("./assets/fonts/future_light.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'future_lightregular';
+  src: url("./assets/fonts/future_light.woff2") format("woff2"), url("./assets/fonts/future_light.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+
 html {
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: 'Montserrat', sans-serif;
   width: 100%;
+  background: #2a2835;
+  overflow-x: hidden;
+  height: 100vh;
 }
 
 body {
   width: 100%;
-  height: 100vh;
+  height: 100%;
 }
 
 h1 {
@@ -158,9 +189,6 @@ h1 {
 
 input:not(input[type=radio]) {
   outline: none;
-  -webkit-appearance: none;
-     -moz-appearance: none;
-          appearance: none;
   border: 1px solid black;
   padding: 10px 20px;
 }
@@ -169,24 +197,9 @@ label {
   margin-bottom: 5px;
 }
 
-input,
-form {
-  border-radius: 8px;
-}
-
 #welcome__container {
   width: 100%;
-  height: 100%;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  background: #2a2835;
+  padding: 50px 20px;
 }
 
 @-webkit-keyframes slideTitle {
@@ -211,29 +224,63 @@ form {
   }
 }
 
+@-webkit-keyframes blink {
+  0% {
+    color: #d300cc;
+  }
+  2% {
+    color: transparent;
+  }
+  4% {
+    color: #d300cc;
+  }
+  10% {
+    color: transparent;
+  }
+  12% {
+    color: #d300cc;
+  }
+}
+
+@keyframes blink {
+  0% {
+    color: #d300cc;
+  }
+  2% {
+    color: transparent;
+  }
+  4% {
+    color: #d300cc;
+  }
+  10% {
+    color: transparent;
+  }
+  12% {
+    color: #d300cc;
+  }
+}
+
 #welcome__title {
-  position: fixed;
-  top: 0;
-  left: 0;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  gap: 20px;
   width: -webkit-max-content;
   width: -moz-max-content;
   width: max-content;
   min-width: 100%;
   overflow: hidden;
   cursor: default;
-  -webkit-animation: slideTitle 15s linear infinite;
-          animation: slideTitle 15s linear infinite;
+  -webkit-animation: slideTitle 25s linear infinite;
+          animation: slideTitle 25s linear infinite;
+  font-family: 'future_lightregular', Arial, Helvetica, sans-serif;
 }
 
 #welcome__title > h1 {
-  font-size: 12rem;
+  padding-right: 150px;
+  font-size: 14rem;
   text-transform: uppercase;
   color: #d300cc;
-  text-shadow: 0 0 30px rgba(211, 0, 204, 0.6);
+  text-shadow: 0 0 30px #d300cc99;
   white-space: nowrap;
 }
 
@@ -245,12 +292,13 @@ form {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  gap: 20px;
-  padding: 20px;
-  background: white;
-  border: 1px solid rgba(0, 0, 0, 0.2);
-  -webkit-box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
-          box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+  gap: 50px;
+  border: 8px solid #d300cc;
+  -webkit-box-shadow: 0 0 40px #d300cc99, inset 0 0 40px #d300cc99;
+          box-shadow: 0 0 40px #d300cc99, inset 0 0 40px #d300cc99;
+  border-radius: 30px;
+  padding: 50px;
+  color: white;
 }
 
 #shopProp > div {
@@ -268,5 +316,61 @@ form {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+}
+
+#shopProp input {
+  border: #d300cc 5px solid;
+  background: transparent;
+  font-size: 3rem;
+  color: inherit;
+}
+
+#shopProp input[type=submit] {
+  background-color: #d300cc;
+}
+
+#shopProp input[type=radio] {
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+  width: 30px;
+  height: 30px;
+  margin-right: 20px;
+}
+
+#shopProp input[type=radio]:checked {
+  background-color: #d300cc;
+  -webkit-box-shadow: 0 0 20px #d300cc99;
+          box-shadow: 0 0 20px #d300cc99;
+}
+
+#shopProp label {
+  font-size: 3rem;
+}
+
+#section-vs {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  padding: 20px;
+  gap: 20px;
+}
+
+#section-vs > div,
+#section-vs > form {
+  background: white;
+  padding: 30px;
+}
+
+#section-vs > div {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+}
+
+#section-vs > form {
+  width: 100%;
 }
 /*# sourceMappingURL=style.css.map */

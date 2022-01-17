@@ -1,0 +1,17 @@
+#section-vs {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 20px;
+    gap: 20px;
+    >div,
+    >form {
+        background: white;
+        padding: 30px;
+    }
+    >div {
+        flex: 1;
+    }
+    >form {
+        width: 100%;
+    }
+}

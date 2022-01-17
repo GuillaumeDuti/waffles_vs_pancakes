@@ -5,15 +5,23 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="./style.css">
     <script src="./script.js" type="module" defer></script>
     <title>Waffles VS pancakes</title>
 </head>
 
 <body>
-    <section>
+    <section id="section-vs">
         <div id="infos" class="container">
-            <h1>{ Nom magasin }</h1>
+            <h1>Mega Shark Waffles</h1>
+            <table>
+                <tr>
+
+                </tr>
+            </table>
             <div>
                 <span>{ Chiffre d'affaire }</span>
             </div>
@@ -30,36 +38,54 @@
                 <span>{ Promos }</span>
             </div>
         </div>
-    </section>
+        <div id="infos" class="container">
+            <h1>La gourde premium</h1>
+            <div>
+                <span>{ Chiffre d'affaire }</span>
+            </div>
+            <div>
+                <span>{ Nombre d'achats tour précédent }</span>
+            </div>
+            <div>
+                <span>{ Nombre d'achats depuis le début }</span>
+            </div>
+            <div>
+                <span>{ Prix de ventes }</span>
+            </div>
+            <div>
+                <span>{ Promos }</span>
+            </div>
+        </div>
 
-    <form id="bizForm" action="" method="post">
-        <div>
-            <label for="stockInput">Stock</label>
-            <input id="stockInput" name="stockInput" type="range" min="5" max="20">
-        </div>
-        <div>
-            <label for="priceInput">Prix de ventes</label>
-            <input id="priceInput" name="priceInput" type="range" min="1" max="20">
-        </div>
-        <div>
-            <p>Promos :</p>
+        <form id="bizForm" action="" method="post">
             <div>
-                <label for="promosInput">Rien</label>
-                <input type="radio" name="promoType" value="noPromos" id="noPromos">
+                <label for="stockInput">Stock</label>
+                <input id="stockInput" name="stockInput" type="range" min="5" max="20">
             </div>
             <div>
-                <label for="promosInput">1 + 1</label>
-                <input type="radio" name="promoType" value="doublePromos" id="doublePromos">
+                <label for="priceInput">Prix de ventes</label>
+                <input id="priceInput" name="priceInput" type="range" min="1" max="20">
             </div>
             <div>
-                <label for="promosInput">50% au second</label>
-                <input type="radio" name="promoType" value="halfPromos" id="halfPromos">
+                <p>Promos :</p>
+                <div>
+                    <label for="promosInput">Rien</label>
+                    <input type="radio" name="promoType" value="noPromos" id="noPromos">
+                </div>
+                <div>
+                    <label for="promosInput">1 + 1</label>
+                    <input type="radio" name="promoType" value="doublePromos" id="doublePromos">
+                </div>
+                <div>
+                    <label for="promosInput">50% au second</label>
+                    <input type="radio" name="promoType" value="halfPromos" id="halfPromos">
+                </div>
             </div>
-        </div>
-        <div>
-            <input type="submit" value="Send">
-        </div>
-    </form>
+            <div>
+                <input type="submit" value="Send">
+            </div>
+        </form>
+    </section>
 
 
 </body>
