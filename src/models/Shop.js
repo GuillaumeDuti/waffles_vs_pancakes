@@ -56,28 +56,28 @@ export default class Shop {
         // If the product is an instance of Product then we start our logic of selling a product
         if (product instanceof Product) {
             // Check if the product is still available
-            if (product.stock > 0) {
+            if (product.getStock() > 0) {
                 switch (this.currentPromo.id) {
                     case 'one+one':
-                        if (product.stock > 1) {
-                            product.stock = product.stock - 2;
+                        if (product.getStock() > 1) {
+                            product.removeProductFromStock(2);
                         }else{
-                            product.stock = 0;
+                            product.setStock(0);
                         }
-                        this.money += product.price;
+                        this.money += product.getPrice();
                         break;
                     case 'second-half':
-                        if (product.stock > 1) {
-                            product.stock = product.stock - 2;
-                            this.money += product.price + (product.price/2)
+                        if (product.getStock() > 1) {
+                            product.removeProductFromStock(2);
+                            this.money += product.getPrice() + (product.getPrice()/2)
                         }else{
-                            product.stock = 0;
-                            this.money += product.price;
+                            product.setStock(0);
+                            this.money += product.getPrice();
                         }
                         break;
                     default:
-                        product.stock--;
-                        this.money += product.price; // this.money = this.money + product.price;
+                        product.removeProductFromStock();
+                        this.money += product.getPrice(); // this.money = this.money + product.price;
                         break;
                 }
             }

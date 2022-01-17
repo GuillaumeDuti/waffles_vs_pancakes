@@ -45,7 +45,7 @@ const promos = [
     }
 ]
 
-shop.addProduct(new Product("gauffre", 0.3, 3.0, 1));
+shop.addProduct(new Product("gauffre", 0.3, 3.0, 10));
 
 // Test First Promo
 shop.setCurrentPromo(promos[0]);
@@ -56,7 +56,7 @@ shop.sellProductByName('gauffre')
 console.log(shop.getProducts()[0]);
 console.log(shop.getMoney(), "After sell");
 
-// TEst Second promo
+// Test Second promo
 shop.setCurrentPromo(promos[1]);
 console.log(shop.getMoney(), "Before sell");
 
