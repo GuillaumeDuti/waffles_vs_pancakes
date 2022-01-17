@@ -449,7 +449,7 @@ label {
   white-space: nowrap;
   text-overflow: none;
   padding-right: 50px;
-  min-width: 200px;
+  min-width: 250px;
 }
 
 #section-vs > form table td:last-of-type {
@@ -463,5 +463,9 @@ label {
 
 #section-vs > form input[type=range] {
   width: 100%;
+}
+
+#section-vs > form input[type=submit] {
+  padding: 10px 20px;
 }
 /*# sourceMappingURL=style.css.map */

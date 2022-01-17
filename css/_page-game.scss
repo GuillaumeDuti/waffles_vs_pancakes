@@ -53,18 +53,25 @@
                     white-space: nowrap;
                     text-overflow: none;
                     padding-right: 50px;
-                    min-width: 200px;
+                    min-width: 250px;
                 }
                 &:last-of-type {
                     width: 100%;
                 }
             }
         }
+        // datalist {
+        //     display: ;
+        // }
         input {
             padding: 0;
             margin-right: 40px;
             &[type=range] {
                 width: 100%;
+
+            }
+            &[type=submit] {
+                padding: 10px 20px;
             }
         }
     }
