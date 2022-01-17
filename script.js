@@ -36,10 +36,8 @@ const shop = new Shop()
 
 shop.addProduct(new Product("gauffre", 0.3, 3.0, 10));
 
-console.log(shop.getProducts()[0]);
-console.log(shop.money);
+console.log(shop.getMoney());
 
-shop.sellProductByName('gauffre');
+shop.payRent();
 
-console.log(shop.getProducts()[0]);
-console.log(shop.money);
+console.log(shop.getMoney());

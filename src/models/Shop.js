@@ -25,6 +25,26 @@ export default class Shop {
         this.products = newProducts;
     }
 
+    getMoney() {
+        return this.money;
+    }
+
+    setMoney(newMoney) {
+        this.name = newMoney;
+    }
+
+    getRent() {
+        return this.rent;
+    }
+
+    setRent(newRent) {
+        this.rent = newRent;
+    }
+
+    payRent(){
+        this.money -= this.rent; // this.money = this.money - product.price;
+    }
+
     /**
      * A method that can permit us to sell a product in our store.
      *
