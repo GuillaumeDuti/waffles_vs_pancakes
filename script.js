@@ -32,18 +32,51 @@ import Client from './src/models/Client.js';
 
 // connecter html et js
 
-class Game {
-    shop1;
-    shop2;
-    currentDay;
-    gameStatus;
-    win;
-}
+const shop = new Shop()
 
-const shop = new Shop('Crepe', 1000);
-const client = new Client(1000, 0.5);
-const product = new Product('gauffres', 0.5, 3.0, 10);
+const promos = [
+    {
+        id: 'one+one',
+        name: '1+1 Gratuit!'
+    },
+    {
+        id: 'second-half',
+        name: '2ème à moitié prix'
+    }
+]
 
-console.log(shop);
-console.log(client);
-console.log(product);
+shop.addProduct(new Product("gauffre", 0.3, 3.0, 10));
+
+// Test First Promo
+// shop.setCurrentPromo(promos[0]);
+// console.log(shop.getMoney(), "Before sell");
+
+// shop.sellProductByName('gauffre')
+
+// console.log(shop.getProducts()[0]);
+// console.log(shop.getMoney(), "After sell");
+
+// // Test Second promo
+// shop.setCurrentPromo(promos[1]);
+// console.log(shop.getMoney(), "Before sell");
+
+// shop.sellProductByName('gauffre')
+
+// console.log(shop.getProducts()[0]);
+// console.log(shop.getMoney(), "After sell");
+
+const client = new Client(2);
+
+const gauffrerie = new Shop('gauffrerie');
+const creperies = new Shop('crêperie');
+
+gauffrerie.setCurrentPromo(promos[1]);
+
+gauffrerie.addProduct(new Product('gauffre', 0.3, 1.5, 10));
+creperies.addProduct(new Product('crêpe', 0.3, 2.0, 10));
+
+client.generateWish({
+    shops : [gauffrerie, creperies],
+});
+
+console.log(client.getWish());
