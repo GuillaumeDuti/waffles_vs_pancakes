@@ -65,18 +65,37 @@ shop.addProduct(new Product("gauffre", 0.3, 3.0, 10));
 // console.log(shop.getProducts()[0]);
 // console.log(shop.getMoney(), "After sell");
 
-const client = new Client(2);
+// const client = new Client(2);
 
-const gauffrerie = new Shop('gauffrerie');
-const creperies = new Shop('crêperie');
+// const gauffrerie = new Shop('gauffrerie');
+// const creperies = new Shop('crêperie');
 
-gauffrerie.setCurrentPromo(promos[1]);
+// gauffrerie.setCurrentPromo(promos[1]);
 
-gauffrerie.addProduct(new Product('gauffre', 0.3, 1.5, 10));
-creperies.addProduct(new Product('crêpe', 0.3, 2.0, 10));
+// gauffrerie.addProduct(new Product('gauffre', 0.3, 1.5, 10));
+// creperies.addProduct(new Product('crêpe', 0.3, 2.0, 10));
 
-client.generateWish({
-    shops : [gauffrerie, creperies],
-});
+// client.generateWish({
+//     shops : [gauffrerie, creperies],
+// });
 
-console.log(client.getWish());
+// console.log(client.getWish());
+
+
+// const submitBtn = document.getElementById('btnSubmit');
+// const inputShop = document.getElementById('shopName');
+// let shopp = "";
+// submitBtn.addEventListener("click", function(e){
+//     shopp = submitForm();
+// });
+// function submitForm() {
+//     shopp = new Shop(inputShop.value);
+//     console.log(shopp)
+// }
+
+// const sectionInfosPlayer = document.getElementById('infosPlayer');
+// const shopTitle = document.createElement("h2");
+// shopTitle.innerText = shopp.getName();
+// sectionInfosPlayer.appendChild(shopTitle);
+
+
